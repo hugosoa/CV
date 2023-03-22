@@ -73,16 +73,106 @@ header{
     color: #eff1e6;
     width: 100%;
 }
+
 .school h2, h3{
     font-family: Kanit;
     color: #0c4b4d;
+    font-size: 25px;
+}
+
+.school p{
+    font-family: Kanit;
+    font-size: 20px;
 }
 .greta{
     width: 40%;
 }
+.greta:before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 90%;
+    border: 3px solid #eff1e6;
+    position: relative;
+    left: -90px;
+    top: 65px;
+    z-index: 1;
+    transition: .3s;
+}
+.greta:after{
+    content: "";
+    position: relative;
+    width: 19px;
+    height: 19px;
+    left: -90px;
+    top: 65px;
+    border-radius: 90%;
+    background-color: #f37b83;
+    opacity: 1;
+    transition: opacity .3s;
+}
+.auto-formation{
+    width: 40%;
+}
+.auto-formation:before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 90%;
+    border: 3px solid #eff1e6;
+    position: relative;
+    left: -90px;
+    top: 65px;
+    z-index: 1;
+    transition: .3s;
+}
 .mmi{
     width: 40%;
 }
+.mmi:before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 90%;
+    border: 3px solid #eff1e6;
+    position: relative;
+    left: -90px;
+    top: 65px;
+    z-index: 1;
+    transition: .3s;
+}
 li{
     list-style: none;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #058F91;
+    font-family: Poppins;
+    color: #eff1e6;
+    width: 100%;
+}
+.skills h2{
+    color: #0c4b4d;
+    font-family: Kanit;
+    text-align: center;
+}
+.skills p{
+    font-family: Kanit;
+    font-size: 20px
+}
+#form-dipl{
+    font-family: Righteous;
+    font-size: 30px;
+    border-bottom: 1px solid  #109da0;
+}
+#skill{
+    font-family: Righteous;
+    font-size: 30px;
+    border-bottom: 1px solid  #109da0;
 }
