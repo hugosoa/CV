@@ -9,6 +9,7 @@ header{
     background-color: #0c4b4d;
     width: 320px;
     height: 100vh;
+    border-right: 5px solid #F6574F;
 }
 .info-wrap{
     display: flex;
@@ -28,6 +29,61 @@ header{
     color: #eff1e6;
     font-size: 17px;
     margin-top: -7px;
+}
+#bulle{
+    position: fixed;
+    top: 50px;
+    left: 288px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #F6574F;
+    outline-offset: 0px;
+    outline: 0px solid #F6574F;
+    transition: .3s;
+}
+#bulle.active{
+    position: fixed;
+    top: 55px;
+    left: 292px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f86e66;
+    transition: .3s;
+}
+#bulle1{
+    position: fixed;
+    top: 300px;
+    left: 288px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #F6574F;
+    outline-offset: 0px;
+    outline: 0px solid #F6574F;
+}
+#bulle2{
+    position: fixed;
+    top: 550px;
+    left: 288px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #F6574F;
+    outline-offset: 0px;
+    outline: 0px solid #F6574F;
+}
+#bulle3{
+    position: fixed;
+    top: 800px;
+    left: 288px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #F6574F;
+    outline-offset: 0px;
+    outline: 0px solid #F6574F;
 }
 .content{
     display: flex;
@@ -86,63 +142,72 @@ header{
 }
 .greta{
     width: 40%;
+    user-select: none;
 }
 .greta:before{
     content: "";
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 90%;
-    border: 3px solid #eff1e6;
     position: relative;
     left: -90px;
     top: 65px;
     z-index: 1;
-    transition: .3s;
+    transition: .3s;  
+    background-color: rgba(239,241,230,0);
+    outline-offset: 2px;
+    outline: 2px solid #eff1e6;
+    
 }
-.greta:after{
-    content: "";
-    position: relative;
-    width: 19px;
-    height: 19px;
-    left: -90px;
-    top: 65px;
-    border-radius: 90%;
-    background-color: #f37b83;
-    opacity: 1;
-    transition: opacity .3s;
+.greta:hover::before{
+    background-color: rgba(239,241,230,1);
 }
+
 .auto-formation{
     width: 40%;
+    user-select: none;
 }
 .auto-formation:before{
     content: "";
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 90%;
-    border: 3px solid #eff1e6;
     position: relative;
     left: -90px;
     top: 65px;
     z-index: 1;
     transition: .3s;
+    background-color: rgba(239,241,230,0);
+    outline-offset: 2px;
+    outline: 2px solid #eff1e6;
+}
+.auto-formation:hover::before{
+    background-color: rgba(239,241,230,1);
 }
 .mmi{
     width: 40%;
+    user-select: none;
 }
 .mmi:before{
     content: "";
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 90%;
-    border: 3px solid #eff1e6;
     position: relative;
     left: -90px;
     top: 65px;
     z-index: 1;
     transition: .3s;
+    background-color: rgba(239,241,230,0);
+    outline-offset: 2px;
+    outline: 2px solid #eff1e6;
+
+}
+.mmi:hover::before{
+    background-color: rgba(239,241,230,1);
 }
 li{
     list-style: none;
@@ -156,15 +221,13 @@ li{
     font-family: Poppins;
     color: #eff1e6;
     width: 100%;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
-.skills h2{
-    color: #0c4b4d;
-    font-family: Kanit;
-    text-align: center;
-}
+
 .skills p{
     font-family: Kanit;
-    font-size: 20px
+    font-size: 25px
 }
 #form-dipl{
     font-family: Righteous;
@@ -175,4 +238,52 @@ li{
     font-family: Righteous;
     font-size: 30px;
     border-bottom: 1px solid  #109da0;
+}
+.lang{
+    align-self: self-start;
+}
+footer{
+    display: flex;
+    margin-left: 320px;
+    width: calc(100% - 320px);
+    background-color: #058F91;
+}
+.form{
+    background-color: #0c4b4d;
+    padding: 50px 25px 50px 25px;
+    text-align: center;
+    margin: 100px;
+}
+.form input, textarea{
+    margin: 30px 10px 30px 10px;
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid #eff1e6;
+    background: none;
+    outline: none;
+    color: #eff1e6;
+    height: 20px;
+    font-size: 16px;
+}
+input::placeholder{
+    font-family: Kanit;
+    color: #eff1e6;
+}
+textarea{
+    height: 150px;
+}
+textarea::placeholder{
+    font-family: Kanit;
+    color: #eff1e6;
+}
+button{
+    background-color: #058F91;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
