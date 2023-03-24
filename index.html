@@ -9,6 +9,17 @@
 </head>
 <body>
     <header>
+        <nav>
+            <a href="">Accueil</a>
+            <a href="">Parcours</a>
+            <a href="">Compétences</a>
+            <a href="">Contact</a>
+        </nav>
+        <button type="button" aria-label="toggle curtain navigation" class="nav-toggler">
+            <span class="line l1"></span>
+            <span class="line l2"></span>
+            <span class="line l3"></span>
+        </button>
         <div class="info-wrap">
             <div class="intro">NOM</div>
             <div class="sous-intro">Hugo Soares</div>
@@ -22,10 +33,10 @@
             <div class="sous-intro">https://hugosoa.github.io</div>
         </div>
         <div class="bulles">
-            <div id="bulle" class="active"></div>
-            <div id="bulle1"></div>
-            <div id="bulle2"></div>
-            <div id="bulle3"></div>
+            <div class="bulle" class="unactive active"></div>
+            <div class="bulle1" class="unactive"></div>
+            <div class="bulle2" class="unactive"></div>
+            <div class="bulle3" class="unactive"></div>
         </div>
 
     </header>
@@ -92,7 +103,7 @@
                     </ul>
                 </div>
                 <div class="lang">
-                    <p>Langues</p>
+                    <p>Langues :</p>
                     <ul>
                         <li>Anglais - B2</li>
                         <li>Français - Courant</li>
@@ -102,7 +113,7 @@
                 <div class="technologies">
                     <p>Technologies :</p>
                     <ul>
-                        <li>C/C++</li>
+                        <li>C / C++</li>
                         <li>HTML / CSS</li>
                         <li>Javascript</li>
                         <li>Git</li>
@@ -113,7 +124,12 @@
             </div>
         </div>
         <footer>
-            <div class="download-resume"><a href="img/1millidollars-mswgPM-TuCw-unsplash.jpg" download=>Télcharger CV</a></div>
+            <div class="more">
+                <h2>En savoir plus</h2>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni tenetur veritatis nesciunt, nemo maxime ut asperiores sapiente odit molestiae molestias praesentium incidunt. Similique quisquam veritatis natus repellendus vitae eum ut.
+                <div class="download-resume"><a href="img/1millidollars-mswgPM-TuCw-unsplash.jpg" download=><img src="img/download-svgrepo-com.svg"></a></div>
+            </div>
+
             <div class="form">
                 <form>
                     <input type="text" id="fname" name="fname" placeholder="Prénom"><br>

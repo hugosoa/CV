@@ -6,10 +6,50 @@ body{
 }
 header{
     position: fixed;
-    background-color: #0c4b4d;
+    background-color: #1D5859;
     width: 320px;
     height: 100vh;
-    border-right: 5px solid #F6574F;
+    border-right: 5px solid #E07469;
+}
+.nav-toggler{
+    position: fixed;
+    z-index: 10;
+    top:  30px;
+    left: 30px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    
+}
+.line{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #eff1e6;
+    transition: transform 0.3s ease-out, opacity 0.1s ease-out
+}
+.l1{
+    transform: translateY(-10px);
+}
+.l3{
+    
+    transform: translateY(10px);
+}
+.nav-toggler.active .l1{
+    transform: translateY(0px) rotate(135deg);
+}
+.nav-toggler.active .l2{
+    opacity: 0;
+}
+.nav-toggler.active .l2{
+    transform: translateY(0px) rotate(-135deg);
 }
 .info-wrap{
     display: flex;
@@ -30,60 +70,50 @@ header{
     font-size: 17px;
     margin-top: -7px;
 }
-#bulle{
+.bulle{
     position: fixed;
     top: 50px;
     left: 288px;
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background-color: #F6574F;
+    background-color: #E07469;
     outline-offset: 0px;
-    outline: 0px solid #F6574F;
+    outline: 0px solid #E07469;
     transition: .3s;
 }
-#bulle.active{
-    position: fixed;
-    top: 55px;
-    left: 292px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #f86e66;
-    transition: .3s;
-}
-#bulle1{
+.bulle1{
     position: fixed;
     top: 300px;
     left: 288px;
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background-color: #F6574F;
+    background-color: #E07469;
     outline-offset: 0px;
     outline: 0px solid #F6574F;
 }
-#bulle2{
+.bulle2{
     position: fixed;
     top: 550px;
     left: 288px;
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background-color: #F6574F;
+    background-color: #E07469;
     outline-offset: 0px;
     outline: 0px solid #F6574F;
 }
-#bulle3{
+.bulle3{
     position: fixed;
     top: 800px;
     left: 288px;
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background-color: #F6574F;
+    background-color: #E07469;
     outline-offset: 0px;
-    outline: 0px solid #F6574F;
+    outline: 0px solid #E07469;
 }
 .content{
     display: flex;
@@ -132,7 +162,7 @@ header{
 
 .school h2, h3{
     font-family: Kanit;
-    color: #0c4b4d;
+    color: #1D5859;
     font-size: 25px;
 }
 
@@ -143,76 +173,79 @@ header{
 .greta{
     width: 40%;
     user-select: none;
+    color: #eff1e6cb;
+    transition: .3s;
+}
+.greta:hover{
+    color: #eff1e6;
 }
 .greta:before{
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 90%;
+    content: "2023";
     position: relative;
-    left: -90px;
-    top: 65px;
-    z-index: 1;
-    transition: .3s;  
-    background-color: rgba(239,241,230,0);
-    outline-offset: 2px;
-    outline: 2px solid #eff1e6;
-    
+    top: 60px;
+    left: -150px;
+    font-size: 20px;
+    transition: .3s;
 }
+
 .greta:hover::before{
-    background-color: rgba(239,241,230,1);
+    left: -160px;
+    transition: .3s;
 }
 
 .auto-formation{
     width: 40%;
     user-select: none;
+    color: #eff1e6cb;
+    transition: .3s;
+}
+.auto-formation:hover{
+    color: #eff1e6;
+    transition: .3s;
 }
 .auto-formation:before{
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 90%;
+    content: "2022";
     position: relative;
-    left: -90px;
-    top: 65px;
-    z-index: 1;
+    top: 60px;
+    left: -150px;
+    font-size: 20px;
     transition: .3s;
-    background-color: rgba(239,241,230,0);
-    outline-offset: 2px;
-    outline: 2px solid #eff1e6;
 }
+
 .auto-formation:hover::before{
-    background-color: rgba(239,241,230,1);
+    left: -160px;
+    transition: .3s;
 }
 .mmi{
     width: 40%;
     user-select: none;
+    transition: .3s;
+    color: #eff1e6cb;
+}
+.mmi:hover{
+    transition: .3s;
+    color: #eff1e6;
 }
 .mmi:before{
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 90%;
+    content: "2022";
     position: relative;
-    left: -90px;
-    top: 65px;
-    z-index: 1;
+    top: 60px;
+    left: -150px;
+    font-size: 20px;
     transition: .3s;
-    background-color: rgba(239,241,230,0);
-    outline-offset: 2px;
-    outline: 2px solid #eff1e6;
-
 }
 .mmi:hover::before{
-    background-color: rgba(239,241,230,1);
+    left: -160px;
+    transition: .3s;
 }
+
 li{
     list-style: none;
 }
-
+#skill{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
 .skills{
     display: flex;
     justify-content: space-around;
@@ -247,16 +280,33 @@ footer{
     margin-left: 320px;
     width: calc(100% - 320px);
     background-color: #058F91;
+    padding-top: 200px;
+}
+.download-resume{
+    justify-content: center;
+}
+.download-resume img{
+    padding: 20px;
+    width: 50px;
+}
+.more{
+    display: flex;
+    margin: 20px 0px 20px 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
 }
 .form{
-    background-color: #0c4b4d;
+    background-color: #1D5859;
     padding: 50px 25px 50px 25px;
     text-align: center;
-    margin: 100px;
+    margin:  50px 4% 100px 50px;
+    width: 40%;
 }
 .form input, textarea{
-    margin: 30px 10px 30px 10px;
-    width: 400px;
+    margin: 30px 10px 50px 10px;
+    width: 90%;
     border: none;
     border-bottom: 1px solid #eff1e6;
     background: none;
@@ -287,3 +337,12 @@ button{
     display: inline-block;
     font-size: 16px;
 }
+
+.more h2{
+    font-family: Kanit;
+    color: #0c4b4d;
+    font-size: 25px;
+}
+.more{
+    font-family: Poppins;
+    color: #eff1e6;}
