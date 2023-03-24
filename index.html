@@ -10,10 +10,13 @@
 <body>
     <header>
         <nav>
-            <a href="">Accueil</a>
-            <a href="">Parcours</a>
-            <a href="">Compétences</a>
-            <a href="">Contact</a>
+            <div class="menu">
+                <a href="#accueil">ACCUEIL</a>
+                <a href="#parcours">PARCOURS</a>
+                <a href="#skill">COMPÉTENCES</a>
+                <a href="#plus">PLUS</a>
+            </div>
+
         </nav>
         <button type="button" aria-label="toggle curtain navigation" class="nav-toggler">
             <span class="line l1"></span>
@@ -21,8 +24,6 @@
             <span class="line l3"></span>
         </button>
         <div class="info-wrap">
-            <div class="intro">NOM</div>
-            <div class="sous-intro">Hugo Soares</div>
             <div class="intro">ROLE</div>
             <div class="sous-intro">Concepteur Développeur</div>
             <div class="intro">EMAIL</div>
@@ -41,7 +42,7 @@
 
     </header>
         <div class="content">
-            <div class="home">
+            <div class="home"id="accueil">
                 <div class="home-left">
                     Bonjour, je m'appelle
                     <div class="home-name">
@@ -58,8 +59,8 @@
                 </div>
             </div>
             
-            <div class="school">
-                <h2 id="form-dipl">Formations et Diplômes</h2>
+            <div class="school" id="parcours">
+                <h2 id="form-dipl">Expériences</h2>
                 <div class="greta" id="greta">
                     <h3>Formation Concepteur et Développeur</h3>
                     <p>Développement d'un CV intéractif en ligne</p>
@@ -90,7 +91,7 @@
                 </div>
                 <h2 id="skill">Compétences</h2>
             </div>
-            <div class="skills">
+            <div class="skills" >
                 <div class="interpersonnel">
                     <p>Interpersonnel :</p>
                     <ul>
@@ -124,7 +125,7 @@
             </div>
         </div>
         <footer>
-            <div class="more">
+            <div class="more" id="plus">
                 <h2>En savoir plus</h2>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni tenetur veritatis nesciunt, nemo maxime ut asperiores sapiente odit molestiae molestias praesentium incidunt. Similique quisquam veritatis natus repellendus vitae eum ut.
                 <div class="download-resume"><a href="img/1millidollars-mswgPM-TuCw-unsplash.jpg" download=><img src="img/download-svgrepo-com.svg"></a></div>
