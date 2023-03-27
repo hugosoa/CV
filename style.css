@@ -5,7 +5,62 @@ html{
 body{
     margin: 0;
     padding: 0;
-    background-color: #eff1e6;
+    background-color: #058F91;
+}
+.loader-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #eff1e6;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}  
+.loader{
+    display: flex;
+    position: inherit;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 7px solid transparent;
+    border-top-color: #058F91;
+    animation: spin 4.5s linear infinite;
+}
+.loader::before, .loader::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 7px solid transparent;
+}
+.loader::before{
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-top-color: rgba(5, 143, 145, 0.7);
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.loader::after{
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    border-top-color: rgba(5, 143, 145, 0.5);
+    animation: spin 1.5s linear infinite;
+}
+.fondu-out{
+    opacity: 0;
+    transition: opacity 0.4s;
 }
 header{
     position: fixed;
@@ -17,10 +72,21 @@ header{
     width: 10px;
     position: fixed;
     top: 0;
-    left: 320px;
-    background: linear-gradient(to bottom, #E07469, #eff1e6);
-    border-radius: 0px 0px 10px 10px;
+    left: 310px;
+    background: linear-gradient(to bottom, #E07469, #eff1e6cc);
+    /* border-radius: 0px 0px 10px 10px; */
 }
+#changing-number{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    bottom: -5%;
+    left: 160px;
+    font-family: Righteous;
+    font-size: 8em;
+    font-weight: bold;
+    color: #1D5859;
+    -webkit-text-stroke: 0.1px #e07569; /* width and color */
+}   
 
 .nav-toggler{
     position: fixed;
@@ -178,14 +244,19 @@ nav.active{
     margin: 0%;
 }
 .home-left{
+    display: flex;
     width: 40%;
+    height: 100vh;
     text-align: left;
-    padding: 100px 30px 20px 60px;
+    padding: 0px 30px 0px 60px;
     font-family: Poppins;
     font-size: 18px;
     color: #E07469;
     font-weight: 200;
-
+    background-color: #eff1e6;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
 }
 .home-name h1{
     font-family: Righteous;
@@ -299,20 +370,20 @@ li{
     margin-top: 100px;
     margin-bottom: 50px;
     font-family: Righteous;
-    font-size: 30px;
-    border-bottom: 1px solid  #109da0;
+    font-size: 40px;
 }
 .skills{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #058F91;
+    border-radius: 50px;
     font-family: Poppins;
     color: #eff1e6;
     width: 100%;
     font-size: 20px;
     letter-spacing: 1px;
     padding: 20px 5% 5% 5%;
+    margin: 50px 100px 100px 100px;
 }
 .skills p{
     font-family: Kanit;
@@ -394,8 +465,7 @@ svg circle:nth-child(2){
 
 #form-dipl{
     font-family: Righteous;
-    font-size: 30px;
-    border-bottom: 1px solid  #109da0;
+    font-size: 40px;
 }
 .lang{
     display: flex;
@@ -403,6 +473,62 @@ svg circle:nth-child(2){
     align-items: center;
     flex: 1;
 }
+.portfolio{
+    width: 100%;
+    background-color: #058F91;
+}
+.portfolio h2{
+    color: #0c4b4d;
+    font-family: Righteous;
+    text-align: center;
+    font-size: 40px;
+}
+.portfolio a{
+    display: flex;
+}
+.portfolio-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px;
+    position: relative;
+}
+.portfolio-container figure{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    flex: 1 0 25%;
+    position: relative;
+    min-width: 250px;
+    min-height: 250px;
+}
+.portfolio-container img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+figcaption{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    color: #E07469;
+    font-family: Righteous;
+    font-size: 3em;
+    opacity: 0;
+    transition: .5s;
+}
+figure:hover figcaption{
+    opacity: 1;
+    transition: .5s;
+}
+figure:hover img{
+    filter: brightness(60%);
+    transition: .3s;
+}
+
 footer{
     display: flex;
     margin-left: 320px;
@@ -458,12 +584,13 @@ button{
     background-color: #058F91;
     border: none;
     border-radius: 10px;
-    color: white;
+    color: #eff1e6;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    z-index: 100001;
 }
 
 .more h2{
@@ -474,3 +601,51 @@ button{
 .more{
     font-family: Poppins;
     color: #eff1e6;}
+@media screen and (max-width: 1024px)
+{
+    header{
+        margin-left: -320px;
+    }
+    .content{
+        width: 100%;
+        margin-left: 0;
+    }
+    .nav-toggler{
+        background: #058F91;
+    }
+    nav{
+        transform: translateX (-100%);
+    }
+    nav.active{
+        transform: translateX(100%);
+    }
+    button{
+        background-color: #058F91;
+        border: none;
+        border-radius: 50%;
+        color: #eff1e6;
+        padding: 21px 23px;
+    }
+    #changing-number{
+        display: none;
+    }
+    #barre{
+        margin-left: -310px;
+    }
+    .skills{
+        flex-direction: column;
+        padding: 0px 5% 5% 5%;;
+    }
+    .interpersonnel{
+        margin-bottom: 30px;
+    }
+    .technologies{
+        margin-top: 50px;
+    }
+    footer{
+        width: 100%;
+        margin-left: 0px;
+        padding: 0;
+    }
+
+}
