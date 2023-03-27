@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
     <link href="style.css" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -16,7 +17,7 @@
                 <a href="#skill">COMPÉTENCES</a>
                 <a href="#plus">PLUS</a>
             </div>
-
+            
         </nav>
         <button type="button" aria-label="toggle curtain navigation" class="nav-toggler">
             <span class="line l1"></span>
@@ -31,7 +32,7 @@
             <div class="intro">NUMERO</div>
             <div class="sous-intro">+33 6 51 61 65 66</div>
             <div class="intro">SITE WEB</div>
-            <div class="sous-intro">https://hugosoa.github.io</div>
+            <div class="sous-intro"><a href="https://hugosoa.github.io">https://hugosoa.github.io</a></div>
         </div>
         <div class="bulles">
             <div class="bulle" class="unactive active"></div>
@@ -39,34 +40,41 @@
             <div class="bulle2" class="unactive"></div>
             <div class="bulle3" class="unactive"></div>
         </div>
-
+        <div id="barre"></div>
     </header>
-        <div class="content">
-            <div class="home"id="accueil">
-                <div class="home-left">
-                    Bonjour, je m'appelle
-                    <div class="home-name">
-                        <h1>HUGO <br>SOARES</h1>
-                    </div>
-                    <p> Originaire de la région parisienne j'ai récemment été diplômé d'un DUT MMI qui m'a permis de maitriser les bases des métiers du multimédia et du numérique.</p>
-                    
-                     Voulant me spécialiser dans le domaine du <strong>développement web</strong>
-                    , je poursuis mon parcours avec une formation de <strong>Concepteur et Développeur Web</strong>. 
-                    Je suis donc à la recherche d'une entreprise pouvant m'accueillir en tant que stagiaire pour une durée de 2 mois a partir 12 juin.
+    <div class="content">
+        <div class="home"id="accueil">
+            <div class="home-left">
+                Bonjour, je m'appelle
+                <div class="home-name">
+                    <h1>HUGO <br>SOARES</h1>
                 </div>
-                <div class="home-right">
-                    <img src="img/1millidollars-mswgPM-TuCw-unsplash.jpg">
-                </div>
+                <p> Originaire de la région parisienne j'ai récemment été diplômé d'un DUT MMI qui m'a permis de maitriser les bases des métiers du multimédia et du numérique.</p>
+                
+                Voulant me spécialiser dans le domaine du <strong>développement web</strong>
+                , je poursuis mon parcours avec une formation de <strong>Concepteur et Développeur Web</strong>. 
+                Je suis donc à la recherche d'une entreprise pouvant m'accueillir en tant que stagiaire pour une durée de 2 mois a partir 12 juin.
             </div>
-            
-            <div class="school" id="parcours">
-                <h2 id="form-dipl">Expériences</h2>
-                <div class="greta" id="greta">
-                    <h3>Formation Concepteur et Développeur</h3>
-                    <p>Développement d'un CV intéractif en ligne</p>
+            <div class="home-right">
+                <img src="img/1millidollars-mswgPM-TuCw-unsplash.jpg">
+            </div>
+        </div>
+        
+        <div class="school" id="parcours">
+            <h2 id="form-dipl">Expériences</h2>
+            <div class="greta" id="greta">
+                <h3>Formation Concepteur et Développeur</h3>
+                <p>Intégration Web</p>
+                <ol>
+                    <li>
+                            Conception de maquette sur Figma. <br>
+                            Création d'un CV en ligne et d'un site Portfolio en HTML / CSS / Javascript
+                        </li>
+                    </ol>
+                    <p>Algorithme</p>
                     <ol>
                         <li>
-                            Développement d'un Site Web en HTML/CSS/Javascript dans le cadre d'un projet tutoré en partenariat avec La Marge / Paris Grand Sud / Lieusaint
+                            POO, Programmation orientée objet en Java  <br>
                         </li>
                     </ol>
                 </div>
@@ -104,13 +112,24 @@
                     </ul>
                 </div>
                 <div class="lang">
-                    <p>Langues :</p>
-                    <ul>
-                        <li>Anglais - B2</li>
-                        <li>Français - Courant</li>
-                    </ul>
+                    <div class="box left">
+                        <svg>
+                            <circle cx="70px" cy="70px" r="70px"></circle>
+                            <circle cx="70px" cy="70px" r="70px"></circle>
+                        </svg>
+                        <span>100%</span>
+                        <h2>FRANÇAIS</h2>
+                    </div>
+                    <div class="box">
+                        <svg>
+                            <circle cx="70px" cy="70px" r="70px"></circle>
+                            <circle cx="70px" cy="70px" r="70px"></circle>
+                        </svg>
+                        <span>75%</span>
+                        <h2>ANGLAIS</h2>
+                    </div>
                 </div>
-
+                
                 <div class="technologies">
                     <p>Technologies :</p>
                     <ul>
@@ -130,7 +149,7 @@
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni tenetur veritatis nesciunt, nemo maxime ut asperiores sapiente odit molestiae molestias praesentium incidunt. Similique quisquam veritatis natus repellendus vitae eum ut.
                 <div class="download-resume"><a href="img/1millidollars-mswgPM-TuCw-unsplash.jpg" download=><img src="img/download-svgrepo-com.svg"></a></div>
             </div>
-
+            
             <div class="form">
                 <form>
                     <input type="text" id="fname" name="fname" placeholder="Prénom"><br>
@@ -141,7 +160,7 @@
                 </form>
             </div>  
         </footer>
-
+        
         <script src="script.js"></script>
-</body>
-</html>
+    </body>
+    </html>

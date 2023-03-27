@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Poppins:wght@300&family=Righteous&display=swap');
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
@@ -9,7 +12,14 @@ header{
     background-color: #1D5859;
     width: 320px;
     height: 100vh;
-    border-right: 5px solid #E07469;
+}
+#barre{
+    width: 10px;
+    position: fixed;
+    top: 0;
+    left: 320px;
+    background: linear-gradient(to bottom, #E07469, #eff1e6);
+    border-radius: 0px 0px 10px 10px;
 }
 
 .nav-toggler{
@@ -88,7 +98,9 @@ nav.active{
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+
 }
+
 .intro{
     font-family: Kanit;
     color: #058F91;
@@ -102,6 +114,11 @@ nav.active{
     font-size: 17px;
     margin-top: -7px;
     margin-bottom: 50px;
+}
+.sous-intro a{
+    text-decoration: none;
+    color: #eff1e6;
+    border-bottom: 1px solid #eff1e6;
 }
 /* .bulle{
     position: fixed;
@@ -166,6 +183,9 @@ nav.active{
     padding: 100px 30px 20px 60px;
     font-family: Poppins;
     font-size: 18px;
+    color: #E07469;
+    font-weight: 200;
+
 }
 .home-name h1{
     font-family: Righteous;
@@ -278,6 +298,9 @@ li{
 #skill{
     margin-top: 100px;
     margin-bottom: 50px;
+    font-family: Righteous;
+    font-size: 30px;
+    border-bottom: 1px solid  #109da0;
 }
 .skills{
     display: flex;
@@ -289,24 +312,96 @@ li{
     width: 100%;
     font-size: 20px;
     letter-spacing: 1px;
+    padding: 20px 5% 5% 5%;
 }
-
 .skills p{
     font-family: Kanit;
     font-size: 25px
 }
+.skills li{
+margin: 20px;
+}
+.box{
+    position: relative;
+    background-color: #058F91;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+svg{
+    height: 180px;
+    width: 180px;
+}
+.left svg circle{
+    fill: none;
+    stroke: #E07469;
+    stroke-width: 21px;
+    transform: translate(20px, 20px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+}
+.left svg circle:nth-child(1){
+    stroke-width: 17px;
+    stroke: #0c4b4d;
+    stroke-dashoffset: 0;
+}
+.left svg circle:nth-child(2){
+    animation: circle1 2s forwards;
+}
+svg circle{
+    fill: none;
+    stroke: #E07469;
+    stroke-width: 21px;
+    transform: translate(20px, 20px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+}
+svg circle:nth-child(1){
+    stroke-width: 17px;
+    stroke: #0c4b4d;
+    stroke-dashoffset: 0;
+}
+svg circle:nth-child(2){
+    animation: circle 2s forwards;
+}
+@keyframes circle1{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes circle{
+    to{
+        stroke-dashoffset: 110;
+    }
+}
+.box span{
+    color: #eff1e6;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Kanit;
+    font-size: 21px;
+}
+.box h2{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 100%;
+    left: 50%;
+    font-size: 1.2em;
+}   
+
 #form-dipl{
     font-family: Righteous;
     font-size: 30px;
     border-bottom: 1px solid  #109da0;
 }
-#skill{
-    font-family: Righteous;
-    font-size: 30px;
-    border-bottom: 1px solid  #109da0;
-}
 .lang{
-    align-self: self-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 }
 footer{
     display: flex;
