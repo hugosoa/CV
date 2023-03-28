@@ -3,12 +3,12 @@ const navigation = document.querySelector("nav")
 
 hamburgerButton.addEventListener("click", toggleNav)
 
-function toggleNav(){
+function toggleNav(){                                           //^^^^^^^^^^ajoute la fonction active aux elements de navigation^^^^^^^^^^^^^^^^^^^^^^^^^^
     hamburgerButton.classList.toggle("active")
     navigation.classList.toggle("active")
-}
+}                                                               
 
-window.onscroll = function(){
+window.onscroll = function(){                                   //progression de la barre au scroll du client et une formule qui prend le % scroller
     window.addEventListener("scroll", () => {
         let hauteur = document.documentElement.scrollHeight - window.innerHeight;
         let position = window.scrollY;
@@ -24,43 +24,28 @@ window.onscroll = function(){
 const loader = document.querySelector('#loaders');
 const desac = document.querySelector('.loader')
 
-window.addEventListener('load', () => {
+window.addEventListener('load', () => {                         //ajoute et enleve des class pour le bon fonctionnement du loader
     loader.classList.add('fondu-out'),
     desac.classList.remove('loader'),
     loader.classList.remove('loader-container');
+    document.body.classList.remove("no-scroll")
 })
-function vh(percent) {
-    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    return (percent * h) / 100;
+
+
+
+
+function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+      left: rect.left + window.scrollX,
+      top: rect.top + window.scrollY
+    };
   }
 
-// window.addEventListener("scroll", () => {
-//     console.log(window.scrollY)
-//     if(window.scrollY > 600 && window.scrollY < 1800)
-//     {
-//         document.getElementById("changing-number").innerHTML = "02";
-//         console.log("scroll ok");
-//     }
-//     else if(window.scrollY >= 1800 && window.scrollY < 2800)
-//     {
-//         document.getElementById("changing-number").innerHTML = "03";
-//     }
-//     else if (window.scrollY >= 2800 && window.scrollY < 3300)
-//     {
-//         document.getElementById("changing-number").innerHTML = "04";
+  const firstBalise = document.querySelector("#form-dipl").getBoundingClientRect().top;
+  console.log(firstBalise)
 
-//     }   
-//     else if (window.scrollY >= 3300)
-//     {
-//         document.getElementById("changing-number").innerHTML = "05";
-//     }
-//     else {
-//         document.getElementById("changing-number").innerHTML = "01";
-
-//     }
-// });
-
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {                       //Change le chiffre de "changing-number" en fonction de % de vh scroller par le client
 
     if(window.pageYOffset > window.innerHeight * 0.50)
     {
