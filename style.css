@@ -90,7 +90,7 @@ header{
 
 .nav-toggler{
     position: fixed;
-    z-index: 10;
+    z-index: 1000;
     top:  20px;
     left: 15px;
     height: 25px;
@@ -160,13 +160,12 @@ nav.active{
 }
 .info-wrap{
     display: flex;
-    padding: 40px;
+    padding: 20px 40px 40px 50px;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100vh;
-
+    margin-top: 84px;
 }
-
 .intro{
     font-family: Kanit;
     color: #058F91;
@@ -327,6 +326,7 @@ nav.active{
     color: #eff1e6;
     transition: .3s;
 }
+
 .auto-formation:before{
     content: "2022";
     position: relative;
@@ -367,10 +367,13 @@ li{
     list-style: none;
 }
 #skill{
+    width: 100%;
     margin-top: 100px;
     margin-bottom: 50px;
     font-family: Righteous;
     font-size: 40px;
+    text-align: center;
+    color: #1D5859;
 }
 .skills{
     display: flex;
@@ -537,11 +540,14 @@ footer{
     padding-top: 200px;
 }
 .download-resume{
-    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .download-resume img{
-    padding: 20px;
-    width: 50px;
+    width: 100%;
 }
 .more{
     display: flex;
@@ -600,7 +606,14 @@ button{
 }
 .more{
     font-family: Poppins;
-    color: #eff1e6;}
+    color: #eff1e6;
+}
+    @media screen and (max-width: 1300px){
+        .skills{
+            flex-direction: column;
+            padding: 0px 5% 5% 5%;;
+        }
+    }
 @media screen and (max-width: 1024px)
 {
     header{
@@ -612,6 +625,7 @@ button{
     }
     .nav-toggler{
         background: #058F91;
+        
     }
     nav{
         transform: translateX (-100%);
@@ -622,19 +636,18 @@ button{
     button{
         background-color: #058F91;
         border: none;
-        border-radius: 50%;
+        border-radius: 40%;
         color: #eff1e6;
-        padding: 21px 23px;
+        padding: 20px 20px;
+    }
+    .line{
+        height: 3px;
     }
     #changing-number{
         display: none;
     }
     #barre{
         margin-left: -310px;
-    }
-    .skills{
-        flex-direction: column;
-        padding: 0px 5% 5% 5%;;
     }
     .interpersonnel{
         margin-bottom: 30px;
@@ -647,5 +660,39 @@ button{
         margin-left: 0px;
         padding: 0;
     }
+    form button{
+        border-radius: 10px;
+    }
 
+}
+
+@media screen and (max-width: 650px) {
+    #barre{
+        width: 5px;
+    }
+    .home-right {
+        display: none;
+    }
+    .home-right img {
+        display: none;
+    }
+    .home-left{
+        width: 100%;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .more{
+        width: 80%;
+        margin: auto;
+    }
+    .form{
+        width: 80%;
+        padding: 20px;
+        margin: 0;
+        margin-top: 70px;
+        margin-bottom: 70px;
+        
+    }
 }

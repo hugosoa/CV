@@ -69,7 +69,7 @@ window.addEventListener("scroll", () => {
     else
         document.getElementById("changing-number").innerHTML = "01";
 
-    if (window.pageYOffset > window.innerHeight * 1.50)
+    if (window.pageYOffset > window.innerHeight * 1.65)
     {
         document.getElementById("changing-number").innerHTML = "03";
     }
