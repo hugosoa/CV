@@ -43,27 +43,32 @@ function getOffset(el) {
   }
 
   const firstBalise = document.querySelector("#form-dipl").getBoundingClientRect().top;
-  console.log(firstBalise)
+  const secondBalise = document.querySelector("#skill").getBoundingClientRect().top;
+  const thirthBalise = document.querySelector("#portfolio").getBoundingClientRect().top;
+  const fourthBalise = document.querySelector("form").getBoundingClientRect().top;
+  
 
-window.addEventListener("scroll", () => {                       //Change le chiffre de "changing-number" en fonction de % de vh scroller par le client
+window.addEventListener("scroll", () => {                       //Change le chiffre de "changing-number" en fonction du nombre de pixel scroll par le client
+   
+    if(window.pageYOffset > 0 && window.pageYOffset < 500)
+        document.getElementById("changing-number").innerHTML = "01";
 
-    if(window.pageYOffset > window.innerHeight * 0.50)
+    if(window.pageYOffset > firstBalise - 300)
     {
         document.getElementById("changing-number").innerHTML = "02";
     }
-    else
-        document.getElementById("changing-number").innerHTML = "01";
 
-    if (window.pageYOffset > window.innerHeight * 1.65)
+    if(window.pageYOffset > secondBalise - 300 && window.pageYOffset > firstBalise)
     {
         document.getElementById("changing-number").innerHTML = "03";
     }
-
-    if (window.pageYOffset > window.innerHeight * 2.25)
+    
+    if(window.pageYOffset > thirthBalise - 300 && window.pageYOffset > secondBalise)
     {
         document.getElementById("changing-number").innerHTML = "04";
     }
-    if (window.pageYOffset > window.innerHeight * 3.25)
+    
+    if(window.pageYOffset > fourthBalise - 500 && window.pageYOffset > thirthBalise)
     {
         document.getElementById("changing-number").innerHTML = "05";
     }
