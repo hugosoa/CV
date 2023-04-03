@@ -1,12 +1,25 @@
 const hamburgerButton = document.querySelector(".nav-toggler")
 const navigation = document.querySelector("nav")
 
+const homeButton = document.querySelector(".accueilButton")
+const expeButton = document.querySelector(".parcoursButton")
+const skillButton = document.querySelector(".skillButton")
+const moreButton = document.querySelector(".moreButton")
+const portfolioButton = document.querySelector(".portfolioButton")
+
+homeButton.addEventListener("click", toggleNav)                 //pour enlever le menu lors du click sur un lien
+expeButton.addEventListener("click", toggleNav)
+skillButton.addEventListener("click", toggleNav)
+homeButton.addEventListener("click", toggleNav)
+moreButton.addEventListener("click", toggleNav)
+portfolioButton.addEventListener("click", toggleNav)
+
 hamburgerButton.addEventListener("click", toggleNav)
 
 function toggleNav(){                                           //^^^^^^^^^^ajoute la fonction active aux elements de navigation^^^^^^^^^^^^^^^^^^^^^^^^^^
     hamburgerButton.classList.toggle("active")
     navigation.classList.toggle("active")
-}                                                               
+}                                                           
 
 window.onscroll = function(){                                   //progression de la barre au scroll du client et une formule qui prend le % scroller
     window.addEventListener("scroll", () => {
